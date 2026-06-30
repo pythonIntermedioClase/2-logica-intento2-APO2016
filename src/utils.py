@@ -93,6 +93,8 @@ DECLARACIONES = [
 
 def calcular_iva(valor_base, tasa=0.19):
     """
+    iva = valor_base * tasa
+    
     Calcula el IVA sobre un valor base.
 
     Args:
@@ -107,11 +109,7 @@ def calcular_iva(valor_base, tasa=0.19):
         calcular_iva(1_000_000, 0.05)  -> 50000.0
         calcular_iva(0)                -> 0.0
     """
-    # TODO:
-    # 1. Multiplica valor_base por tasa y guarda el resultado en una
-    #    variable llamada iva.
-    # 2. Retorna iva.
-    pass
+ 
 
 
 def formatear_reporte_valor(nit, nombre, valor, estado):
@@ -137,8 +135,12 @@ def formatear_reporte_valor(nit, nombre, valor, estado):
     #    (el :, dentro del f-string agrega separadores de miles al número)
     # 2. Guarda el resultado en una variable llamada linea.
     # 3. Retorna linea.
-    pass
-
+    
+    
+    
+    linea = f"NIT {nit} | {nombre} | ${valor:,} | {estado}"
+    return linea
+        
 
 def mostrar_resultado(etiqueta, valor):
     """
@@ -151,12 +153,8 @@ def mostrar_resultado(etiqueta, valor):
         etiqueta (str): Descripción del resultado.
         valor (float): Valor numérico a mostrar.
     """
-    # TODO:
-    # 1. Imprime usando print() y un f-string con este formato:
-    #    "  {etiqueta}: ${valor:,.0f}"
-    #    (el ,.0f formatea el número con separadores de miles y sin decimales)
-    # Nota: este es un procedimiento, no retorna nada.
-    pass
+   
+    print(f"  {etiqueta}: ${valor:,.0f}")
 
 
 def generar_ficha_contribuyente(nit, nombre, municipio, periodo, valor, estado):
