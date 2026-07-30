@@ -377,15 +377,13 @@ def aplicar_descuento(valor, pago_voluntario):
         aplicar_descuento(1_000_000, True)   -> 900000.0
         aplicar_descuento(1_000_000, False)  -> 1000000
     """
-    # TODO:
-    # 1. Si pago_voluntario es True:
-    #    - Calcula el descuento: descuento = valor * 0.10
-    #    - Calcula el valor final: valor_con_descuento = valor - descuento
-    #    - Retorna valor_con_descuento
-    # 2. Si pago_voluntario es False:
-    #    - Retorna valor sin modificar
-    pass
-
+    if pago_voluntario ==True:
+     descuento = valor * 0.10
+     valor_con_descuento = valor - descuento
+     return valor_con_descuento
+    return valor
+ 
+    
 
 def asignar_prioridad(valor, tiene_historial_incumplimiento):
     """
