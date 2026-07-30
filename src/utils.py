@@ -401,14 +401,15 @@ def asignar_prioridad(valor, tiene_historial_incumplimiento):
     Returns:
         str: "ALTA", "MEDIA" o "BAJA".
     """
-    # TODO:
-    # 1. Evalúa las dos condiciones por separado y guárdalas en variables:
-    #    valor_alto = valor > 1_000_000
-    #    tiene_historial = tiene_historial_incumplimiento
-    # 2. Escribe un if/elif/else:
-    #    - si valor_alto AND tiene_historial: retorna "ALTA"
-    #    - si valor_alto OR tiene_historial: retorna "MEDIA"
-    #    - de lo contrario: retorna "BAJA"
+    valor_alto = valor > 1_000_000
+    tiene_historial = tiene_historial_incumplimiento
+    if valor_alto and tiene_historial_incumplimiento:
+            return "ALTA" 
+    elif valor_alto or tiene_historial_incumplimiento:
+        return "MEDIA"
+    else:
+        return "BAJA"
+   
     pass
 
 
